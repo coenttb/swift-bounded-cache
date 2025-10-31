@@ -208,6 +208,19 @@ class HTTPCache {
 }
 ```
 
+## Related Packages
+
+- [swift-html](https://github.com/coenttb/swift-html) - The Swift library for domain-accurate and type-safe HTML & CSS.
+- [coenttb-web](https://github.com/coenttb/coenttb-web) - A Swift package with tools for web development building on swift-web.
+
+## License
+
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
 ## API Reference
 
 ### Initialization
@@ -268,16 +281,3 @@ Returns true if cache contains no items.
 
 - Swift 5.10+
 - Platforms: macOS, iOS, tvOS, watchOS, Linux
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
-
-## Related Packages
-
-- [swift-html](https://github.com/coenttb/swift-html) - The Swift library for domain-accurate and type-safe HTML & CSS.
-- [coenttb-web](https://github.com/coenttb/coenttb-web) - A Swift package with tools for web development building on swift-web.
