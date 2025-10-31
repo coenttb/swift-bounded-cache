@@ -279,10 +279,5 @@ This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) fo
 
 ## Related Packages
 
-- [swift-html](https://github.com/coenttb/swift-html) - A Swift DSL for type-safe HTML
-- [swift-css](https://github.com/coenttb/swift-css) - A Swift DSL for type-safe CSS
-- [coenttb-web](https://github.com/coenttb/coenttb-web) - Reusable SwiftWeb components
-
----
-
-Made with ❤️ by [coenttb](https://coenttb.com)
+- [swift-html](https://github.com/coenttb/swift-html) - The Swift library for domain-accurate and type-safe HTML & CSS.
+- [coenttb-web](https://github.com/coenttb/coenttb-web) - A Swift package with tools for web development building on swift-web.
