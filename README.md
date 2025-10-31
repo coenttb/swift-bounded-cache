@@ -210,8 +210,9 @@ class HTTPCache {
 
 ## Related Packages
 
-- [swift-html](https://github.com/coenttb/swift-html) - The Swift library for domain-accurate and type-safe HTML & CSS.
-- [coenttb-web](https://github.com/coenttb/coenttb-web) - A Swift package with tools for web development building on swift-web.
+### Used By
+
+- [swift-throttling](https://github.com/coenttb/swift-throttling): A Swift package for request throttling.
 
 ## License
 
