@@ -1,7 +1,6 @@
 public import Async
-public import Async_Waiter
 public import Memory_Heap
-public import Queue_Primitive
+public import Queue
 
 extension Cache.Entry {
 

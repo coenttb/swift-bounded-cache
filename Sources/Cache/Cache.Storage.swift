@@ -1,4 +1,4 @@
-public import Async_Mutex
+public import Async
 public import Ownership
 
 #if DEBUG

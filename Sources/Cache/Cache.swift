@@ -1,9 +1,8 @@
 public import Array_Primitive
 public import Array
 public import Async
-public import Async_Waiter
 public import Buffer_Linear_Primitive
-public import Buffer_Primitive
+public import Buffer
 public import Buffer_Ring_Primitive
 public import Column
 public import Memory_Allocator_Primitive
@@ -11,7 +10,7 @@ public import Memory_Heap
 internal import Ownership
 public import Queue
 public import Standard_Library_Extensions
-public import Storage_Contiguous
+public import Storage
 
 #if DEBUG
     internal import Synchronization

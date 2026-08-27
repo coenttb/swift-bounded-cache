@@ -1,5 +1,4 @@
-public import Async_Mutex
-import Async
+public import Async
 public import Ownership
 
 extension Cache.Bounded {

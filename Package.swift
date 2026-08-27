@@ -17,8 +17,12 @@ let package = Package(
             targets: ["Cache"]
         ),
         .library(
-            name: "Cache Test Support",
-            targets: ["Cache Test Support"]
+            name: "Cache Standard Library Integration",
+            targets: ["Cache Standard Library Integration"]
+        ),
+        .library(
+            name: "Cache Apple Foundation Integration",
+            targets: ["Cache Apple Foundation Integration"]
         ),
     ],
     dependencies: [
@@ -27,19 +31,11 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-async.git",
+            url: "https://github.com/swift-atoms/swift-async.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-ownership.git",
-            branch: "main"
-        ),
-        .package(
-            url: "https://github.com/swift-molecules/swift-effect.git",
-            branch: "main"
-        ),
-        .package(
-            url: "https://github.com/swift-molecules/swift-dictionary.git",
+            url: "https://github.com/swift-atoms/swift-ownership.git",
             branch: "main"
         ),
         .package(
@@ -51,15 +47,11 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-ownership-shared.git",
-            branch: "main"
-        ),
-        .package(
             url: "https://github.com/swift-molecules/swift-buffer-linear.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-storage.git",
+            url: "https://github.com/swift-atoms/swift-storage.git",
             branch: "main"
         ),
         .package(
@@ -71,19 +63,15 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-buffer.git",
+            url: "https://github.com/swift-atoms/swift-buffer.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-index.git",
+            url: "https://github.com/swift-atoms/swift-queue.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-time.git",
-            branch: "main"
-        ),
-        .package(
-            url: "https://github.com/swift-molecules/swift-collection.git",
+            url: "https://github.com/swift-molecules/swift-standard-library-extensions.git",
             branch: "main"
         ),
     ],
@@ -94,49 +82,42 @@ let package = Package(
                 .product(name: "Array Primitive", package: "swift-array"),
                 .product(name: "Array", package: "swift-array"),
                 .product(name: "Async", package: "swift-async"),
-                .product(name: "Async Waiter", package: "swift-async"),
-                .product(name: "Async Mutex", package: "swift-async"),
                 .product(name: "Ownership", package: "swift-ownership"),
-                .product(name: "Effect", package: "swift-effect"),
-                .product(name: "Dictionary", package: "swift-dictionary"),
                 .product(name: "Column", package: "swift-column"),
                 .product(name: "Buffer Ring Primitive", package: "swift-buffer-ring"),
-                .product(
-                    name: "Ownership Shared Primitive",
-                    package: "swift-ownership-shared"
-                ),
                 .product(
                     name: "Buffer Linear Primitive",
                     package: "swift-buffer-linear"
                 ),
-                .product(
-                    name: "Storage Contiguous",
-                    package: "swift-storage"
-                ),
+                .product(name: "Storage", package: "swift-storage"),
                 .product(name: "Memory Heap", package: "swift-memory-heap"),
                 .product(
                     name: "Memory Allocator Primitive",
                     package: "swift-memory-allocation"
                 ),
-                .product(name: "Buffer Primitive", package: "swift-buffer"),
-                .product(name: "Index", package: "swift-index"),
-                .product(name: "Time", package: "swift-time"),
-                .product(name: "Collection", package: "swift-collection"),
+                .product(name: "Buffer", package: "swift-buffer"),
+                .product(name: "Queue", package: "swift-queue"),
+                .product(
+                    name: "Standard Library Extensions",
+                    package: "swift-standard-library-extensions"
+                ),
             ]
         ),
         .target(
-            name: "Cache Test Support",
+            name: "Cache Standard Library Integration",
+            dependencies: ["Cache"]
+        ),
+        .target(
+            name: "Cache Apple Foundation Integration",
             dependencies: [
                 "Cache",
-                .product(name: "Time Test Support", package: "swift-time"),
-            ],
-            path: "Tests/Support"
+                "Cache Standard Library Integration",
+            ]
         ),
         .testTarget(
             name: "Cache Tests",
             dependencies: [
                 "Cache",
-                "Cache Test Support",
                 .product(name: "Async", package: "swift-async"),
             ]
         ),
