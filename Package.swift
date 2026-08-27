@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "swift-cache-primitives",
+    name: "swift-cache",
     platforms: [
         .macOS(.v27),
         .iOS(.v27),
@@ -13,131 +13,131 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Cache Primitives",
-            targets: ["Cache Primitives"]
+            name: "Cache",
+            targets: ["Cache"]
         ),
         .library(
-            name: "Cache Primitives Test Support",
-            targets: ["Cache Primitives Test Support"]
+            name: "Cache Test Support",
+            targets: ["Cache Test Support"]
         ),
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-primitives/swift-array-primitives.git",
+            url: "https://github.com/swift-molecules/swift-array.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-async-primitives.git",
+            url: "https://github.com/swift-molecules/swift-async.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-ownership-primitives.git",
+            url: "https://github.com/swift-molecules/swift-ownership.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-effect-primitives.git",
+            url: "https://github.com/swift-molecules/swift-effect.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-dictionary-primitives.git",
+            url: "https://github.com/swift-molecules/swift-dictionary.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-column-primitives.git",
+            url: "https://github.com/swift-molecules/swift-column.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-buffer-ring-primitives.git",
+            url: "https://github.com/swift-molecules/swift-buffer-ring.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-ownership-shared-primitives.git",
+            url: "https://github.com/swift-molecules/swift-ownership-shared.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-buffer-linear-primitives.git",
+            url: "https://github.com/swift-molecules/swift-buffer-linear.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-storage-primitives.git",
+            url: "https://github.com/swift-molecules/swift-storage.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-memory-heap-primitives.git",
+            url: "https://github.com/swift-molecules/swift-memory-heap.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-memory-allocation-primitives.git",
+            url: "https://github.com/swift-molecules/swift-memory-allocation.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-buffer-primitives.git",
+            url: "https://github.com/swift-molecules/swift-buffer.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-index-primitives.git",
+            url: "https://github.com/swift-molecules/swift-index.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-time-primitives.git",
+            url: "https://github.com/swift-molecules/swift-time.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-collection-primitives.git",
+            url: "https://github.com/swift-molecules/swift-collection.git",
             branch: "main"
         ),
     ],
     targets: [
         .target(
-            name: "Cache Primitives",
+            name: "Cache",
             dependencies: [
-                .product(name: "Array Primitive", package: "swift-array-primitives"),
-                .product(name: "Array Primitives", package: "swift-array-primitives"),
-                .product(name: "Async Primitives", package: "swift-async-primitives"),
-                .product(name: "Async Waiter Primitives", package: "swift-async-primitives"),
-                .product(name: "Async Mutex Primitives", package: "swift-async-primitives"),
-                .product(name: "Ownership Primitives", package: "swift-ownership-primitives"),
-                .product(name: "Effect Primitives", package: "swift-effect-primitives"),
-                .product(name: "Dictionary Primitives", package: "swift-dictionary-primitives"),
-                .product(name: "Column Primitives", package: "swift-column-primitives"),
-                .product(name: "Buffer Ring Primitive", package: "swift-buffer-ring-primitives"),
+                .product(name: "Array Primitive", package: "swift-array"),
+                .product(name: "Array", package: "swift-array"),
+                .product(name: "Async", package: "swift-async"),
+                .product(name: "Async Waiter", package: "swift-async"),
+                .product(name: "Async Mutex", package: "swift-async"),
+                .product(name: "Ownership", package: "swift-ownership"),
+                .product(name: "Effect", package: "swift-effect"),
+                .product(name: "Dictionary", package: "swift-dictionary"),
+                .product(name: "Column", package: "swift-column"),
+                .product(name: "Buffer Ring Primitive", package: "swift-buffer-ring"),
                 .product(
                     name: "Ownership Shared Primitive",
-                    package: "swift-ownership-shared-primitives"
+                    package: "swift-ownership-shared"
                 ),
                 .product(
                     name: "Buffer Linear Primitive",
-                    package: "swift-buffer-linear-primitives"
+                    package: "swift-buffer-linear"
                 ),
                 .product(
-                    name: "Storage Contiguous Primitives",
-                    package: "swift-storage-primitives"
+                    name: "Storage Contiguous",
+                    package: "swift-storage"
                 ),
-                .product(name: "Memory Heap Primitives", package: "swift-memory-heap-primitives"),
+                .product(name: "Memory Heap", package: "swift-memory-heap"),
                 .product(
                     name: "Memory Allocator Primitive",
-                    package: "swift-memory-allocation-primitives"
+                    package: "swift-memory-allocation"
                 ),
-                .product(name: "Buffer Primitive", package: "swift-buffer-primitives"),
-                .product(name: "Index Primitives", package: "swift-index-primitives"),
-                .product(name: "Time Primitives", package: "swift-time-primitives"),
-                .product(name: "Collection Primitives", package: "swift-collection-primitives"),
+                .product(name: "Buffer Primitive", package: "swift-buffer"),
+                .product(name: "Index", package: "swift-index"),
+                .product(name: "Time", package: "swift-time"),
+                .product(name: "Collection", package: "swift-collection"),
             ]
         ),
         .target(
-            name: "Cache Primitives Test Support",
+            name: "Cache Test Support",
             dependencies: [
-                "Cache Primitives",
-                .product(name: "Time Primitives Test Support", package: "swift-time-primitives"),
+                "Cache",
+                .product(name: "Time Test Support", package: "swift-time"),
             ],
             path: "Tests/Support"
         ),
         .testTarget(
-            name: "Cache Primitives Tests",
+            name: "Cache Tests",
             dependencies: [
-                "Cache Primitives",
-                "Cache Primitives Test Support",
-                .product(name: "Async Primitives", package: "swift-async-primitives"),
+                "Cache",
+                "Cache Test Support",
+                .product(name: "Async", package: "swift-async"),
             ]
         ),
     ],

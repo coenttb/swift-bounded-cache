@@ -1,6 +1,6 @@
 import Testing
 
-@testable import Cache_Primitives
+@testable import Cache
 
 @Suite
 struct `Cache.Evict Tests` {

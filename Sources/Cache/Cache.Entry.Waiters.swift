@@ -1,6 +1,6 @@
-public import Async_Primitives
-public import Async_Waiter_Primitives
-public import Memory_Heap_Primitives
+public import Async
+public import Async_Waiter
+public import Memory_Heap
 public import Queue_Primitive
 
 extension Cache.Entry {

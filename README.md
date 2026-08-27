@@ -1,7 +1,7 @@
-# Cache Primitives
+# Cache
 
 ![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
-[![CI](https://github.com/swift-primitives/swift-cache-primitives/actions/workflows/ci.yml/badge.svg)](https://github.com/swift-primitives/swift-cache-primitives/actions/workflows/ci.yml)
+[![CI](https://github.com/swift-molecules/swift-cache/actions/workflows/ci.yml/badge.svg)](https://github.com/swift-molecules/swift-cache/actions/workflows/ci.yml)
 
 `Cache<Key, Value>` — a thread-safe, compute-if-absent async cache. `value(for:compute:)` returns a cached value, or runs the async compute closure on a miss and stores the result. Concurrent callers requesting the same missing key **coalesce onto a single in-flight computation** rather than each running the work — so a burst of cache misses for one key does the expensive work once, not N times.
 
@@ -19,7 +19,7 @@
 ## Quick Start
 
 ```swift
-import Cache_Primitives
+import Cache
 
 let cache = Cache<String, Int>()
 
@@ -36,7 +36,7 @@ let timeout = try await cache.value(for: "config.timeout") {
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/swift-primitives/swift-cache-primitives.git", branch: "main")
+    .package(url: "https://github.com/swift-molecules/swift-cache.git", branch: "main")
 ]
 ```
 
@@ -44,7 +44,7 @@ dependencies: [
 .target(
     name: "App",
     dependencies: [
-        .product(name: "Cache Primitives", package: "swift-cache-primitives")
+        .product(name: "Cache", package: "swift-cache")
     ]
 )
 ```
@@ -67,8 +67,8 @@ The package is pre-1.0 — depend on `branch: "main"` until `0.1.0` is tagged. R
 
 ## Related Packages
 
-- [`swift-async-primitives`](https://github.com/swift-primitives/swift-async-primitives) — the async coordination primitives the cache's in-flight-computation sharing is built on.
-- [`swift-dictionary-primitives`](https://github.com/swift-primitives/swift-dictionary-primitives) — the keyed storage behind the cache's entry table.
+- [`swift-async`](https://github.com/swift-molecules/swift-async) — the async coordination primitives the cache's in-flight-computation sharing is built on.
+- [`swift-dictionary`](https://github.com/swift-molecules/swift-dictionary) — the keyed storage behind the cache's entry table.
 
 ---
 

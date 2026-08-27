@@ -2,7 +2,7 @@
 # Triaged 2026-04-29 — anomaly-fix pass after wave-4 PR-branch triage didn't apply.
 description: "Cache<Key, Value> — a thread-safe compute-if-absent async cache; concurrent callers for the same key coalesce onto a single in-flight computation."
 topics:
-  - primitives
+  - molecules
   - cache
 homepage: "https://swift-institute.org"
 readme:

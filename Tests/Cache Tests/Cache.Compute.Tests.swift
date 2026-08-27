@@ -1,6 +1,6 @@
 import Testing
 
-@testable import Cache_Primitives
+@testable import Cache
 
 private struct Fault: Swift.Error, Sendable, Equatable {
     let code: Int

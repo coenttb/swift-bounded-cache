@@ -1,5 +1,5 @@
-public import Async_Mutex_Primitives
-public import Ownership_Primitives
+public import Async_Mutex
+public import Ownership
 
 #if DEBUG
     internal import Synchronization

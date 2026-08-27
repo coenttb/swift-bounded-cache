@@ -1,17 +1,17 @@
 public import Array_Primitive
-public import Array_Primitives
-public import Async_Primitives
-public import Async_Waiter_Primitives
+public import Array
+public import Async
+public import Async_Waiter
 public import Buffer_Linear_Primitive
 public import Buffer_Primitive
 public import Buffer_Ring_Primitive
-public import Column_Primitives
+public import Column
 public import Memory_Allocator_Primitive
-public import Memory_Heap_Primitives
-internal import Ownership_Primitives
-public import Queue_Primitives
+public import Memory_Heap
+internal import Ownership
+public import Queue
 public import Standard_Library_Extensions
-public import Storage_Contiguous_Primitives
+public import Storage_Contiguous
 
 #if DEBUG
     internal import Synchronization

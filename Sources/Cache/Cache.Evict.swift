@@ -1,4 +1,4 @@
-public import Effect_Primitives
+public import Effect
 
 extension Cache {
 

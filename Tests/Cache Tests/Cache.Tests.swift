@@ -1,8 +1,8 @@
-import Async_Primitives
+import Async
 import Synchronization
 import Testing
 
-@testable import Cache_Primitives
+@testable import Cache
 
 private actor Outcome<Value: Sendable> {
     private var terminal: Terminal?
