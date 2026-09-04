@@ -1,5 +1,5 @@
 public import Async
-public import Memory_Heap
+public import Memory
 public import Queue
 
 extension Cache.Entry {

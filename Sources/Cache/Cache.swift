@@ -6,7 +6,7 @@ public import Buffer
 public import Buffer_Ring_Primitive
 public import Column
 public import Memory_Allocator_Primitive
-public import Memory_Heap
+public import Memory
 internal import Ownership
 public import Queue
 public import Standard_Library_Extensions
