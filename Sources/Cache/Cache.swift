@@ -1,6 +1,7 @@
 public import Array_Primitive
 public import Array
 public import Async
+public import Async_Waiter
 public import Buffer_Linear_Primitive
 public import Buffer
 public import Buffer_Ring_Primitive

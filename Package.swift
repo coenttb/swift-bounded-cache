@@ -26,6 +26,7 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(url: "https://github.com/swift-molecules/swift-async-waiter.git", branch: "main"),
         .package(
             url: "https://github.com/swift-molecules/swift-array.git",
             branch: "main"
@@ -79,6 +80,7 @@ let package = Package(
         .target(
             name: "Cache",
             dependencies: [
+                .product(name: "Async Waiter", package: "swift-async-waiter"),
                 .product(name: "Array Primitive", package: "swift-array"),
                 .product(name: "Array", package: "swift-array"),
                 .product(name: "Async", package: "swift-async"),
